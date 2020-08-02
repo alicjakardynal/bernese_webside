@@ -3,14 +3,16 @@ body{
     box-sizing: border-box;
 }
 .menu{
+    z-index: 1;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px;
     height: 10vh;
+    width: 100%;
     background-color: #0f5e0fd0;
     box-shadow:  0px 5px 10px #491b1b;
-    position: sticky;
+    position: fixed;
     color: white;
     &::after{
         content: "";
@@ -36,6 +38,7 @@ body{
 font-size: 3rem;
          font-weight: 700;
 font-family: 'Amatic SC', cursive; 
+letter-spacing: 5px;
     }
   
 }
@@ -46,15 +49,16 @@ font-family: 'Amatic SC', cursive;
     .nav{
 padding: 50px;
 font-weight: 700;
-font-size: 1rem;
+font-size: 1.5rem;
 transition: 1s;
 &:hover{
-    transform: scale(1.5)
+    transform: scale(1.5);
 }
     }
 }
 }
 video{
+    z-index: -1;
     height: 50%;
     width: 100%;
 }
@@ -65,3 +69,74 @@ display: flex;
 justify-content: center;
 
 }
+
+#about_us{
+    padding: 10px 50px;
+    margin: 15px 0;
+    background-color:  #c7ecc7;
+    
+    width: 50vw;
+    height: 30vh;
+    position: relative;
+    left: 20%;
+    h2{
+        font-weight: 700;
+    }
+    p{
+        font-size: 1rem;
+    }
+}
+
+#gallery{
+  .slider-wrapper {
+     
+        width: 70%;}
+
+         .control-next.control-arrow {
+            right: 300px;
+}
+ .control-prev.control-arrow {
+    left: 300px;
+}
+}
+
+#contact{
+    margin: 20px 0;
+    width: 50%;
+    height: 20vh;
+    padding: 10px 50px;
+    position: relative;
+    left: 20%;
+    background-color:  #c7ecc7;
+    text-align: center;
+    h2{
+        padding: 20px 0;
+    }
+    p{
+        font-size: 1rem;
+    }
+    i{
+        padding: 5px;
+    }
+   
+}
+.footer{
+    padding: 10px;
+    height: 15px;
+    width: 100%;
+    position: fixed;
+    z-index: 3;
+    bottom: 0;
+    left: 0;
+    background-color:  #0f5e0fd0;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    div{
+      padding: 0 20px;
+    }
+    p{
+      display: inline-block;
+      padding: 0 5px
+    }
+  }

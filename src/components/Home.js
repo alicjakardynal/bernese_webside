@@ -8,6 +8,16 @@ import {
   scrollSpy,
   scroller
 } from "react-scroll";
+import "react-responsive-carousel/lib/styles/carousel.min.css"; 
+import { Carousel } from 'react-responsive-carousel';
+import img1 from '../assets/DSC00978.JPG';
+import img2 from '../assets/DSC00978.JPG';
+import img3 from '../assets/DSC00978.JPG';
+import img4 from '../assets/DSC00978.JPG';
+import img5 from '../assets/DSC00978.JPG';
+import img6 from '../assets/DSC00978.JPG';
+import img7 from '../assets/DSC00978.JPG';
+import img8 from '../assets/DSC00978.JPG';
 
 class Main extends Component {
   render() {
@@ -19,6 +29,7 @@ class Main extends Component {
         <AboutUs />
         <Gallery />
         <Contact />
+        <Footer/>
       </>
     );
   }
@@ -40,6 +51,7 @@ class Nav extends Component {
               spy={true}
               smooth={true}
               duration={700}
+              offset={-400}
             >
               {" "}
               O Nas
@@ -79,7 +91,7 @@ class VideoBanner extends Component {
      
         <video   autoPlay loop muted>
           <source
-            src="../videos/68b791eb-1d11-4276-a79b-64163eaa2f28.MP4"
+            src="../videos/VID_20200719_134749.mp4"
             type="video/mp4"
           />
         </video>
@@ -92,7 +104,26 @@ class AboutUs extends Component {
   render() {
     return (
       <>
-        <div id="about_us">o Nas</div>
+        <div id="about_us">
+          <h2>
+            O NAS
+          </h2>
+          <p>
+            Jesteśmy nową hodowlą i ludźmi, którzy kochają zwierzęta a szczególnie tę rasę. Berneńskie psy pasterskie to niezwykle łagodne i przyjacielskie pieski,
+             bardzo mądre. Cierpliwe i wyrozumiałe psy tej rasy doskonale dogadają się z pociechami w każdym wieku, uznawane za jedne 
+             z najlepszych psów rodzinnych. Sprawdzają się 
+             również przy pracy z osobami chorymi, czy niepełnosprawnymi. Rasa pochodzi ze Szwajcarii, cechuję się wielkim oddaniem i lojalnością.
+              Berneński pies pasterski jest 
+             aktywny i energiczny. Wymaga sporo ruchu, ale nie jest też wyczynowcem,
+              dlatego od biegu przy rowerze lepsza będzie piesza wędrówka. Dorosłemu psu powinno się zapewnić do kilku godzin spaceru dziennie.
+               
+          </p>
+          <p>
+            Nasze szczeniaczki
+              żyją w świetnych warunkach otoczone miłością i do takich domów także chcielibyśmy je wydać. Odbiór jest możliwy od 08.08.2020r w miejscowości
+              Busko-Zdrój. Pieski posiadają rodowody i chipy oraz są zaszczepione i odrobaczone.
+          </p>
+        </div>
       </>
     );
   }
@@ -101,7 +132,43 @@ class Gallery extends Component {
   render() {
     return (
       <>
-        <div id="gallery">karuzel</div>
+        <div id="gallery">
+        <Carousel showArrows={true} autoPlay>
+                <div>
+                    <img src={img1} />
+                   
+                </div>
+                <div>
+                    <img src={img2} />
+              
+                </div>
+                <div>
+                    <img src={img3} />
+                  
+                </div>
+                <div>
+                    <img src={img4} />
+                   
+                </div>
+                <div>
+                    <img src={img5} />
+                 
+                </div>
+                <div>
+                    <img src={img6} />
+                
+                </div>
+                <div>
+                    <img src={img7} />
+        
+                </div>
+                <div>
+                    <img src={img8} />
+             
+                </div>
+          
+            </Carousel>
+        </div>
       </>
     );
   }
@@ -110,9 +177,33 @@ class Contact extends Component {
   render() {
     return (
       <>
-        <div id="contact">kontact</div>
+        <div id="contact">
+          <h2>Jeżeli jesteś zainteresowany naszymi pieskami zapraszamy do kontaktu</h2>
+          <p>  <i class="fas fa-phone-alt"></i> +48 510 180 226</p>
+          <p> Możliwość zobaczenia piesków w naszej miejscowości Busko-Zdrój</p>
+        </div>
       </>
     );
+  }
+}
+
+class Footer extends Component{
+  render(){
+    return(
+      <>
+       <div className="footer">
+          <div>
+            <i class="fas fa-phone-alt"></i>
+            <p>+48 510 180 226</p>
+          </div>
+         
+          <div>
+          <i class="fas fa-envelope-open-text"></i>
+            <p>k.alicja66@gmail.com</p>
+          </div>
+        </div>
+      </>
+    )
   }
 }
 export default Main;
