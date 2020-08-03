@@ -14,7 +14,7 @@ body {
   box-shadow: 0px 5px 10px #491b1b;
   position: fixed;
   color: white;
-  #menu{display: flex;}
+ 
   &::after {
     content: "";
     position: absolute;
@@ -230,10 +230,11 @@ video {
       display: flex;
       flex-direction: column;
       position: relative;
-      top: 350%;
-      background-color: #0f5e0fd0;
+      top: 436%;
+      background-color:#0f5e0fd0;
       z-index: 4;
       padding: 4px 10px 10px 10px;
+ 
     }
     .fa-bars {
       display: block;
