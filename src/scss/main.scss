@@ -28,7 +28,7 @@ body {
     align-items: center;
     div {
       height: 155px;
-      width: 84px;
+      width: 64px;
       margin: 0 20px 0 0;
       background-image: url("../assets/5f1edd50c359d.png");
       background-size: contain;
@@ -79,7 +79,7 @@ video {
   background-color: #c7ecc7;
 
   width: 50vw;
-  height: 30vh;
+  height: 50vh;
   position: relative;
   left: 20%;
   h2 {
@@ -108,7 +108,7 @@ video {
 #contact {
   margin: 20px 0;
   width: 50%;
-  height: 20vh;
+  height: 35vh;
   padding: 10px 50px;
   position: relative;
   left: 20%;
@@ -166,7 +166,7 @@ video {
     margin: 15px 0;
 
     width: 100%;
-    height: 30vh;
+    height: 50vh;
     left: 0;
   }
 }
@@ -189,7 +189,7 @@ video {
   #contact {
     margin: 20px 0;
     width: 100%;
-    height: 20vh;
+    height: 40vh;
     padding: 10px;
     box-sizing: border-box;
 
@@ -212,7 +212,7 @@ video {
         font-size: 1.5rem;
       }
       div {
-        width: 59px;
+        width: 39px;
       }
     }
   }
@@ -258,7 +258,8 @@ video {
   }
 
   #about_us {
-    height: 50vh;
+    height: 90vh;
+    padding: 40px;
     p {
       font-size: 0.8rem;
     }
@@ -267,7 +268,7 @@ video {
   #contact {
     margin: 11px 0;
 
-    height: 30vh;
+    height: 50vh;
     padding: 10px;
     box-sizing: border-box;
   }

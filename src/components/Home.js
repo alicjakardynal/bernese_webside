@@ -37,7 +37,7 @@ class Main extends Component {
 
 class Nav extends Component {
   state={
-    hamburgerNav: true,
+    hamburgerNav: false,
     displayNav: "flex"
   }
   manageNav=()=>{
