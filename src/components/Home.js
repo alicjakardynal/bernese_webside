@@ -17,6 +17,7 @@ import img7 from '../assets/DSC01448.JPG';
 import img8 from '../assets/DSC01032.JPG';
 import img9 from '../assets/IMG-1443.jpg';
 import img10 from '../assets/DSC01044.JPG';
+import vid from '../assets/VID_20200719_134749.mp4';
 
 class Main extends Component {
   render() {
@@ -36,8 +37,8 @@ class Main extends Component {
 
 class Nav extends Component {
   state={
-    hamburgerNav: false,
-    displayNav: "none"
+    hamburgerNav: true,
+    displayNav: "flex"
   }
   manageNav=()=>{
     this.setState({
@@ -101,9 +102,9 @@ class VideoBanner extends Component {
       {/* <div className="video_banner"> */}
 
      
-        <video   autoPlay loop muted>
+        <video autoPlay loop muted>
           <source
-            src="../videos/VID_20200719_134749.mp4"
+            src={vid}
             type="video/mp4"
           />
         </video>
