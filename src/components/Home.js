@@ -1,23 +1,22 @@
 import React, { Component } from "react";
 import {
   Link,
-  DirectLink,
-  Element,
-  Events,
+ 
   animateScroll as scroll,
-  scrollSpy,
-  scroller
+
 } from "react-scroll";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; 
 import { Carousel } from 'react-responsive-carousel';
-import img1 from '../assets/DSC00978.JPG';
-import img2 from '../assets/DSC00978.JPG';
-import img3 from '../assets/DSC00978.JPG';
-import img4 from '../assets/DSC00978.JPG';
-import img5 from '../assets/DSC00978.JPG';
-import img6 from '../assets/DSC00978.JPG';
-import img7 from '../assets/DSC00978.JPG';
-import img8 from '../assets/DSC00978.JPG';
+import img1 from '../assets/DSC01063.JPG';
+import img2 from '../assets/DSC01357.JPG';
+import img3 from '../assets/IMG_20200724_175606 — kopia.jpg';
+import img4 from '../assets/DSC01494.JPG';
+import img5 from '../assets/DSC01399.JPG';
+import img6 from '../assets/DSC01481.JPG';
+import img7 from '../assets/DSC01448.JPG';
+import img8 from '../assets/DSC01032.JPG';
+import img9 from '../assets/IMG-1443.jpg';
+import img10 from '../assets/DSC01044.JPG';
 
 class Main extends Component {
   render() {
@@ -36,7 +35,18 @@ class Main extends Component {
 }
 
 class Nav extends Component {
+  state={
+    hamburgerNav: false,
+    displayNav: "none"
+  }
+  manageNav=()=>{
+    this.setState({
+      hamburgerNav: this.state.hamburgerNav ? false: true,
+      displayNav:this.state.displayNav ? "flex" : "none",
+    });
+  }
   render() {
+    const {nav}=this.state.hamburgerNav;
     return (
       <>
         <div className="menu">
@@ -44,7 +54,9 @@ class Nav extends Component {
             <div></div>
             <h2>BERNEŃSKA WATAHA</h2>
           </div>
-          <div className="menu_section">
+          <i class="fas fa-bars"  onClick={this.manageNav}></i>
+          <div className="menu_section hamburger" style={{display: this.state.displayNav}}>
+          
             <Link
               className="nav about_us"
               to="about_us"
@@ -164,6 +176,14 @@ class Gallery extends Component {
                 </div>
                 <div>
                     <img src={img8} />
+             
+                </div>
+                <div>
+                    <img src={img9} />
+             
+                </div>
+                <div>
+                    <img src={img10} />
              
                 </div>
           
